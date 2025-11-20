@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jocelyn Villalon Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #e683b4;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #450b62;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #ff0066;
+    }
+
+    /* Home Section */
+    header {
+      background: linear-gradient(135deg, #fa86ec, #06223a);
+      padding: 150px 10% 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .home-text {
+      max-width: 500px;
+    }
+
+    .home-text p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .home-text h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+    }
+
+    .home-text h1 span {
+      color: #450b62;
+    }
+
+    .home-text h2 {
+      font-size: 1.2rem;
+      color: #c6e7ed;
+      margin-top: 10px;
+    }
+
+    .home-image img {
+      width: 350px;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 3px solid #06223a;
+      box-shadow: 0 0 20px #fa86ec;
+    }
+
+    /* About Section */
+    section {
+      padding: 100px 10%;
+    }
+
+    #about {
+      background: #754683;
+      color: #445977;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    #about img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      border: 3px solid #06223a;
+      box-shadow: 0 0 20px #fa86ec;
+    }
+
+    .about-text {
+      max-width: 600px;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      color: #ff0066;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Services Section */
+    #services {
+      background: #4a2f53;
+      text-align: center;
+    }
+
+    #services h2 {
+      font-size: 2rem;
+      color: #ff0066;
+      margin-bottom: 2rem;
+    }
+
+    .service-boxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .service {
+      background: #520454;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 280px;
+      color: #ddd;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      border: 3px solid #06223a;
+      box-shadow: 0 0 20px #fa86ec;
+    }
+
+    .service h3 {
+      color: #ff0066;
+      margin-bottom: 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: #11112b;
+      color: #fff;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2rem;
+      color: #ff0066;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      max-width: 500px;
+      margin: auto;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: none;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    form input {
+      height: 45px;
+    }
+
+    form textarea {
+      resize: none;
+    }
+
+    form button {
+      background: #ff0066;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: 0.3s;
+    }
+
+    form button:hover {
+      background: #e6005c;
+    }
+
+    /* Footer */
+    footer {
+      background: #e683b4;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-image img {
+        margin-top: 2rem;
+        width: 250px;
+      }
+
+      #about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #about img {
+        margin-bottom: 2rem;
+      }
+
+      .service-boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Jocelyn</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <header id="home">
+    <div class="home-text">
+      <p>IT Student</p>
+      <h1>Hi, I'm <span>Jocelyn</span><br>Villalon From GRC</h1>
+      <h2>Ready to learn and grow in the field of Information Technology.</h2>
+    </div>
+    <div class="home-image">
+      <img src="image/jocelyn.jpg" alt="Jocelyn Image">
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <img src="image/jocelyn.jpg" alt="About Photo">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        I am Jocelyn Villalon, an IT student at GRC. 
+        At present, I may not yet have enough skills in the field of Information Technology,
+        but I am willing to learn and improve myself. I understand that as an IT student, 
+        it is important to learn how to create, manage, and enhance systems or programs that can help people and businesses.
+        I want to understand what an IT professional truly does — from developing software, 
+        maintaining networks, to protecting data and information. I am determined to dedicate my time and effort to become a skilled and responsible IT professional in the future.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="service-boxes">
+      <div class="service">
+        <h3>Website Design & Development</h3>
+        <p>Create a simple portfolio, business, or school project website using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="service">
+        <h3>Computer Troubleshooting & Maintenance</h3>
+        <p>Fixing basic computer problems (e.g., slow performance, file recovery, virus removal).</p>
+      </div>
+      <div class="service">
+        <h3>Data Entry & Database Management</h3>
+        <p>Encoding and organizing data sa Excel, Google Sheets, o basic database systems tulad ng MySQL o Access.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="#">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Jocelyn Vilalon. All rights reserved.
+  </footer>
+
+</body>
+</html>
